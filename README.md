@@ -1,6 +1,10 @@
 # Physics Notes
 A repository to store notes for 2nd year physics courses at Durham university
 
+## Notes class
+
+The file `physics_notes.cls` is a custom class for formatting the notes in the repo. In order to use it, you have to place it in the local classes folder of your TeX distribution (⁨`usr⁩ ▸ ⁨local⁩ ▸ ⁨texlive⁩ ▸ ⁨texmf-local⁩ ▸ ⁨tex⁩ ▸ ⁨latex⁩ ▸ ⁨local⁩` on macOS). 
+
 ## Repo structure
 
 Currently, the repository is split into modules, which are further split into courses. For example:
