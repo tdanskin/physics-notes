@@ -11,6 +11,8 @@
 *.cb
 *.cb2
 .*.lb
+*.pdf
+*.DS_Store
 
 ## Intermediate documents:
 *.dvi
@@ -240,5 +242,3 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
-
-.DS_Store
