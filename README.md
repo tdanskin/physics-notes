@@ -25,3 +25,7 @@ Each course folder contains a `main.tex` file, along with a folder containing Te
 ## Branching
 
 For each set of course notes, there will be a primary development branch (e.g. `quantum-mechanics-2` for the PHYS2581 Quantum Mechanics course). 
+
+##Editing 
+
+Use 'm.' at the start of a commit to show a minor edit. e.g. spelling, format...
