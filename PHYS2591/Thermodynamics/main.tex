@@ -1,11 +1,90 @@
-\documentclass{physics_notes}
-
+\documentclass{physics-notes}
 \title{Thermodynamics}
 \author{St Aidan's Physics Society}
 \date{\today}
 
 \begin{document}
-
-\maketitle
-
+\subsection{SECTION 1:Introduction to Thermodynamic Laws and Processes}
+\subsubsection{The Laws of Thermodynamics}
+The 4 Laws of Thermodynamics can be summarised as such:
+\begin{description}[font=$\bullet$~\normalfont\scshape]
+	\item [ZEROTH:] If 2 systems are independently in thermal equilibrium with another system, then the 2 systems must be in thermal equilibrium with one another.
+	\item [FIRST:] ΔU = Q + W, where U, Q and W are the internal energy, heat exchange of and work done on/by a system respectively.
+	\item [SECOND:] Defines entropy—describes the directionality of thermodynamic processes.
+	\item [THIRD:] A system can never reach absolute zero. 
+\end{description}
+\subsubsection{The First Law}
+Work is a form of energy associated with thermodynamic processes, and takes many forms. In general, different modes of work can be categorised into ‘Configuration Work,’ ‘Adiabatic Work,’ or ‘Dissipative Work:’
+CONFIGURATION WORK – essentially ‘useful work,’ this is work that results in a change to the state of a system. 
+ADIABATIC WORK – any mode of work which acts on an isolated system.
+DISSIPATIVE WORK – the work that gets turned into internal energy.
+Work done (and heat exchange) are represented by inexact differentials (as they are path dependent):
+\begin{equation}
+\partial W = -pdV 
+\end{equation}
+Note that work is NEGATIVE if work is done BY something, and POSITIVE if work is done ON something. 
+For example, if a system goes from state i to state f, with constant pressure, then the total work done is expressed as such:
+\begin{equation}
+W_(i->f) = \int_{V_i}^{V_f} \partial W = -p \int_{V_i}^{V_f} dV
+\end{equation}
+If V_f > V_i then W_(i->f) > 0, and therefore work was done on the system. Therefore if V_f < V_i, work was done by the system.
+Using the inexact differentials defined above, we can therefore derive the following:
+\begin{equation}
+\Delta U = TdS - pdV = \partial Q + \partial W
+\end{equation}
+This is the differential equation for the first law, and can be used to derive other differential equations, i.e., substituting C_VdT for \Delta U (for a constant volume process).
+In general, U = U(V, T). U is also path independent, and therefore uses an exact differential, dU. In contrast, work and heat exchange are path dependent, and thus are mathematically expressed as inexact differentials.
+\subsubsection{Quasi-Static Processes and Specific Heat Capacities}
+A quasi-static process is one that takes places at a slow rate, such that at any point in the process, the system is close to thermal equilibrium. There are a few types of quasi-static process:
+\begin{description}[font=$\bullet$~\normalfont\scshape]
+	\item [ISOBARIC]	- constant pressure
+	\item [ISOCHORIC]	- constant volume
+	\item [ISOTHERMAL]	- constant temperature
+\end{description}
+These processes can be described on p-V diagrams, and each type of process occurs between isotherms—constant-temperature functions of pressure and volume. 
+Isobaric processes do work as a system transitions between isotherms/states. An isochoric process does no work, and an isothermal process does work as a state transitions ‘along’ an isotherm.
+The Specific Heat Capacity of a material is defined by the amount of energy required to raise the temperature of 1kg of the material by 1 K. Specific heat capacities at constant volume and pressure –denoted as C_v and C_p –can be related to U, V and T as such:
+\begin{equation}
+C_V = (\frac{\partial U}{\partial T})_V
+\end{equation}
+and
+\begin{equation}
+C_p - C_V = [(\frac{\partial U}{\partial V})_T + p](\frac{\partial V}{\partial T})_p
+\end{equation}
+Additionally, when considering the Molar Gas Constant, denoted by R, these two heat capacities can be related as such:
+\begin{equation}
+C_p = C_V + R
+\end{equation}
+This relation is useful when solving thermodynamic differential equations in particular, and the use of the specific heat capacities becomes more evident when mathematically solving adiabatic systems.
+\subsection{SECTION 2: Heat Engines}
+A heat engine is simply a system which acts to convert heat into work. 
+There are four stages of a simple heat engine:
+\begin{description}[font=$\bullet$~\normalfont\scshape]
+	\item [i.]		Heat is received from a high temperature source, into the working fluid.
+	\item [ii.]		Some heat is then converted into work.
+	\item [iii.]	The ‘waste’ heat is rejected to a lower temperature sink.
+	\item [iv.]		The system returns to its original state, and the cycle begins again.
+\end{description}
+This process occurs between 2 heat reservoirs, known as a heat source and heat sink. A heat reservoir is a body large enough to be considered to have infinite heat capacity.
+\subsubsection{The Carnot Cycle}
+The Carnot cycle is the most idealised form of heat engine: energy dissipation from the working fluid is utilised as mechanical work ONLY—there is no energy ‘waste.’ The Carnot principles are defined as:
+\begin{description}[font=$\bullet$~\normalfont\scshape]
+	\item o	Of all the heat engines working between 2 temperatures, none is more efficient than a Carnot engine.
+	\item o	All reversible heat engines operating between 2 heat reservoirs have the same efficiency.
+\end{description}
+The Carnot Cycle defines the working principle of a Carnot engine. There are 4 stages to the Carnot Cycle:
+\begin{description}[font=$\bullet$~\normalfont\scshape]
+	\item [i.]	A reversible isothermal expansion. Heat is taken into the working fluid.
+	\item [ii.] A reversible adiabatic gas expansion process. In this process, the system is thermally isolated. The working fluid continues to expand and do work on the surroundings.
+	\item [iii.] A reversible isothermal compression process. Surroundings do work to the working fluid, resulting in a loss of heat.
+	\item [iv.] A reversible adiabatic process. The working fluid is again thermally insulated. The surroundings do work on the fluid, the temperature rises back to the original temperature. 
+\end{description}
+In a Carnot engine, the ratio of heat into/out of the working fluid is the same as the ratio of the heat reservoir temperatures:
+\begin{equation}
+\frac{Q_H}{\abs{Q_L}} = \frac{T_H}{T_L}
+\end{equation}
+The efficiency of a heat engine can the be defined by:
+\begin{equation}
+\eta = \frac{\abs{Work Done}}{Heat Input} = \frac{Product}{Expense} = 1 - \frac{\abs{Q_L}}{Q_H} = 1 - \frac{T_L}{T_H}
+\end{equation}
 \end{document}
